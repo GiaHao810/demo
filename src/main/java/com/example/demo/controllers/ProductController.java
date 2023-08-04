@@ -49,7 +49,7 @@ public class ProductController {
                 new ResponseObject("OK", "Product Inserted", repository.save(newProduct))
         );
     }
-//Put Method - Using to Update - Insert a new Product to Database kkk
+//Put Method - Using to Update - Insert a new Product to Database
     @PutMapping("/{id}")
     ResponseEntity<ResponseObject> updateProduct(@PathVariable Long id, @RequestBody Products newProduct){
         Products updatedProduct = repository.findById(id)
